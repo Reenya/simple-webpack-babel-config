@@ -35,10 +35,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.html$/i,
-        loader: "html-loader"
-      },
-      {
         test: /\.(css)$/,
         use: [{ loader: "style-loader" }, { loader: "css-loader" }]
       },
@@ -51,6 +47,8 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
+      title: "Hello",
+      buildTime: new Date(),
       template: "public/index.html"
     })
   ]
